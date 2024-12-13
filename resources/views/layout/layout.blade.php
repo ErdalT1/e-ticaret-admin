@@ -16,11 +16,11 @@
         <link rel="stylesheet" id="primaryColor" href="{{asset('dashboad/assets/css/orange-color.css')}}">
         </head>
         <body>
-            @include('frontend.inc.header')
+            @include('inc.header')
 
             @yield('content')
 
-            @include('frontend.inc.footer')
+            @include('inc.footer')
 
             <script src="{{asset('dashboad/assets/vendor/js/jquery-3.6.0.min.js')}}"></script>
             <script src="{{asset('dashboad/assets/vendor/js/jquery.overlayScrollbars.min.js')}}"></script>

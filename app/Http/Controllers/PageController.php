@@ -7,39 +7,39 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function anasayfa(){
-        return view('frontend.pages.index');
+        return view('pages.index');
     }
 
     public function allCustomer(){
-        return view('frontend.pages.all-customer');
+        return view('pages.all-customer');
     }
 
     public function addProduct(){
-        return view('frontend.pages.add-product');
+        return view('pages.add-product');
     }
 
     public function allProduct(){
-        return view('frontend.pages.all-product');
+        return view('pages.all-product');
     }
 
     public function category(){
-        return view('frontend.pages.category');
+        return view('pages.category');
     }
 
     public function order(){
-        return view('frontend.pages.order');
+        return view('pages.order');
     }
 
     public function calendar(){
-        return view('frontend.pages.calendar');
+        return view('pages.calendar');
     }
 
     public function login(){
-        return view('frontend.pages.authentication.login');
+        return view('pages.authentication.login');
     }
 
 
     public function register(){
-        return view('frontend.pages.authentication.register');
+        return view('pages.authentication.register');
     }
 }

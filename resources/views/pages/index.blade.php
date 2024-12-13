@@ -1,4 +1,4 @@
-@extends('frontend.layout.layout')
+@extends('layout.layout')
 @section('content')
 
 
