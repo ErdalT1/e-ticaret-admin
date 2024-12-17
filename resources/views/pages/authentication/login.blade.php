@@ -27,27 +27,29 @@
         </div>
         <div class="bottom">
             <h3 class="panel-title">Login</h3>
-            <form>
+            <form method="POST" action="{{ route('authentication.login') }}">
+                @csrf
                 <div class="input-group mb-30">
                     <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
-                    <input type="text" class="form-control" placeholder="Username or email address">
+                    <input type="text" class="form-control" name="email" placeholder="Username or email address" required>
                 </div>
                 <div class="input-group mb-20">
                     <span class="input-group-text"><i class="fa-regular fa-lock"></i></span>
-                    <input type="password" class="form-control rounded-end" placeholder="Password">
+                    <input type="password" class="form-control rounded-end" name="password" placeholder="Password" required>
                     <a role="button" class="password-show"><i class="fa-duotone fa-eye"></i></a>
                 </div>
                 <div class="d-flex justify-content-between mb-30">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="loginCheckbox">
+                        <input class="form-check-input" type="checkbox" name="remember" id="loginCheckbox">
                         <label class="form-check-label text-white" for="loginCheckbox">
                             Remember Me
                         </label>
                     </div>
-                    <a href="dashboard-reset-password.html" class="text-white fs-14">Forgot Password?</a>
+                    <a href="#" class="text-white fs-14">Forgot Password?</a>
                 </div>
-                <button class="btn btn-primary w-100 login-btn">Sign in</button>
+                <button type="submit" class="btn btn-primary w-100 login-btn">Sign in</button>
             </form>
+
             <div class="other-option">
                 <p>Or continue with</p>
                 <div class="social-box d-flex justify-content-center gap-20">
