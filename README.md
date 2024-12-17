@@ -1,4 +1,4 @@
-# Laravel-Cafe
+
 
 Bu proje bir Laravel uygulamasıdır. Aşağıdaki adımları izleyerek projeyi yerel ortamda Laragon kullanarak çalıştırabilirsiniz.
 
