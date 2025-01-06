@@ -1,8 +1,6 @@
 @extends('layout.layout')
 @section('content')
 
-
-
 <!-- main sidebar start -->
 <div class="main-sidebar flush-menu">
     <div class="main-menu">
@@ -59,8 +57,8 @@
                     <li class="sidebar-dropdown-item">
                         <a role="button" class="sidebar-link has-sub" data-dropdown="userDropdown"><span class="nav-icon"><i class="fa-light fa-user"></i></span> <span class="sidebar-txt">User</span></a>
                         <ul class="sidebar-dropdown-menu" id="userDropdown">
-                            <li class="sidebar-dropdown-item"><a href="dashboard-view-profile.html" class="sidebar-link">View Profile</a></li>
-                            <li class="sidebar-dropdown-item"><a href="dashboard-edit-profile.html" class="sidebar-link">Edit Profile</a></li>
+                            <li class="sidebar-dropdown-item"><a href="{{route('view-profile')}}" class="sidebar-link">View Profile</a></li>
+                            <li class="sidebar-dropdown-item"><a href="{{route('edit-profile')}}" class="sidebar-link">Edit Profile</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-dropdown-item">
@@ -109,7 +107,7 @@
     </div>
 </div>
 <!-- main sidebar end -->
-<body class="body-padding body-p-top dark-theme">
+<body class="body-padding body-p-top light-theme">
 <!-- main content start -->
 <div class="main-content">
     <div class="dashboard-breadcrumb mb-30">

@@ -27,7 +27,7 @@
         </div>
         <div class="bottom">
             <h3 class="panel-title">Login</h3>
-            <form method="POST" action="{{ route('authentication.login') }}">
+            <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="input-group mb-30">
                     <span class="input-group-text"><i class="fa-regular fa-user"></i></span>

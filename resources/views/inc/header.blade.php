@@ -17,7 +17,7 @@
                 <div class="nav-close-btn">
                     <button id="navClose"><i class="fa-light fa-bars-sort"></i></button>
                 </div>
-                <a href="#" target="_blank" class="btn btn-sm btn-primary site-view-btn"><i class="fa-light fa-globe me-1"></i> <span>View Website</span></a>
+                <a href="{{route('anasayfa')}}" target="_blank" class="btn btn-sm btn-primary site-view-btn"><i class="fa-light fa-globe me-1"></i> <span>View Website</span></a>
             </div>
             <div class="col-4 d-lg-none">
                 <div class="mobile-logo">

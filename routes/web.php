@@ -27,6 +27,12 @@ Route::get('/register', [PageController::class,'register'])->name('register');
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 
+Route::get('/login', [PageController::class, 'login'])->name('login');
+
+Route::get('/view-profile', [PageController::class,'viewprofile'])->name('view-profile');
+
+Route::get('/edit-profile', [PageController::class,'editprofile'])->name('edit-profile');
+
 
 
 

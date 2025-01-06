@@ -1,14 +1,14 @@
 @extends('layout.layout')
 @section('content')
-<body class="body-padding body-p-top light-theme">
+
 <!-- main sidebar start -->
 <div class="main-sidebar flush-menu">
     <div class="main-menu">
         <ul class="sidebar-menu scrollable">
-            <li class="sidebar-item">
+            <li class="sidebar-item open">
                 <ul class="sidebar-link-group">
                     <li class="sidebar-dropdown-item">
-                        <a href="dashboard-index.html" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-grid-2"></i></span> <span class="sidebar-txt">Dashboard</span></a>
+                        <a href="dashboard-index.html" class="sidebar-link active"><span class="nav-icon"><i class="fa-light fa-grid-2"></i></span> <span class="sidebar-txt">Dashboard</span></a>
                     </li>
                 </ul>
             </li>
@@ -16,22 +16,22 @@
                 <a role="button" class="sidebar-link-group-title has-sub">Apps</a>
                 <ul class="sidebar-link-group">
                     <li class="sidebar-dropdown-item">
-                        <a href="dashboard-all-customer.html" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-user-group"></i></span> <span class="sidebar-txt">All Customer</span></a>
+                        <a href="{{route('all-customer')}}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-user-group"></i></span> <span class="sidebar-txt">All Customer</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
-                        <a href="dashboard-add-product.html" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-plus-square"></i></span> <span class="sidebar-txt">Add Product</span></a>
+                        <a href="{{route('add-product')}}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-plus-square"></i></span> <span class="sidebar-txt">Add Product</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
-                        <a href="dashboard-all-product.html" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-boxes"></i></span> <span class="sidebar-txt">All Product</span></a>
+                        <a href="{{route('all-product')}}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-boxes"></i></span> <span class="sidebar-txt">All Product</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
-                        <a href="dashboard-category.html" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-tag"></i></span> <span class="sidebar-txt">Category</span></a>
+                        <a href="{{route('category')}}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-tag"></i></span> <span class="sidebar-txt">Category</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
-                        <a href="dashboard-order.html" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-cart-shopping-fast"></i></span> <span class="sidebar-txt">Order</span></a>
+                        <a href="{{route('order')}}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-cart-shopping-fast"></i></span> <span class="sidebar-txt">Order</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
-                        <a href="dashboard-calendar.html" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-calendar"></i></span> <span class="sidebar-txt">Calendar</span></a>
+                        <a href="{{route('calendar')}}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-calendar"></i></span> <span class="sidebar-txt">Calendar</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
                         <a href="dashboard-invoices.html" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-file-invoice"></i></span> <span class="sidebar-txt">Invoices</span></a>
@@ -47,8 +47,8 @@
                     <li class="sidebar-dropdown-item">
                         <a role="button" class="sidebar-link has-sub" data-dropdown="authDropdown"><span class="nav-icon"><i class="fa-light fa-user-cog"></i></span> <span class="sidebar-txt">Authentication</span></a>
                         <ul class="sidebar-dropdown-menu" id="authDropdown">
-                            <li class="sidebar-dropdown-item"><a href="dashboard-login.html" class="sidebar-link">Login</a></li>
-                            <li class="sidebar-dropdown-item"><a href="dashboard-registration.html" class="sidebar-link">Registration</a></li>
+                            <li class="sidebar-dropdown-item"><a href="{{route('login')}}" class="sidebar-link">Login</a></li>
+                            <li class="sidebar-dropdown-item"><a href="{{route('register')}}" class="sidebar-link">Registration</a></li>
                             <li class="sidebar-dropdown-item"><a href="dashboard-reset-password.html" class="sidebar-link">Reset Password</a></li>
                             <li class="sidebar-dropdown-item"><a href="dashboard-update-password.html" class="sidebar-link">Update Password</a></li>
                             <li class="sidebar-dropdown-item"><a href="dashboard-login-status.html" class="sidebar-link">Login Status</a></li>
@@ -57,8 +57,8 @@
                     <li class="sidebar-dropdown-item">
                         <a role="button" class="sidebar-link has-sub" data-dropdown="userDropdown"><span class="nav-icon"><i class="fa-light fa-user"></i></span> <span class="sidebar-txt">User</span></a>
                         <ul class="sidebar-dropdown-menu" id="userDropdown">
-                            <li class="sidebar-dropdown-item"><a href="dashboard-view-profile.html" class="sidebar-link">View Profile</a></li>
-                            <li class="sidebar-dropdown-item"><a href="dashboard-edit-profile.html" class="sidebar-link">Edit Profile</a></li>
+                            <li class="sidebar-dropdown-item"><a href="{{route('view-profile')}}" class="sidebar-link">View Profile</a></li>
+                            <li class="sidebar-dropdown-item"><a href="{{route('edit-profile')}}" class="sidebar-link">Edit Profile</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-dropdown-item">
@@ -107,7 +107,7 @@
     </div>
 </div>
 <!-- main sidebar end -->
-
+<body class="body-padding body-p-top light-theme">
 <!-- main content start -->
 <div class="main-content">
     <div class="row g-4">

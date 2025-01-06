@@ -42,4 +42,12 @@ class PageController extends Controller
     public function register(){
         return view('pages.authentication.register');
     }
+
+    public function viewprofile(){
+        return view('pages.view-profile');
+    }
+
+    public function editprofile(){
+        return view('pages.edit-profile');
+    }
 }

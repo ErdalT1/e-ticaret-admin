@@ -1,6 +1,6 @@
 @extends('layout.layout')
 @section('content')
-<body class="body-padding body-p-top light-theme">
+
 <!-- main sidebar start -->
 <div class="main-sidebar flush-menu">
     <div class="main-menu">
@@ -8,7 +8,7 @@
             <li class="sidebar-item open">
                 <ul class="sidebar-link-group">
                     <li class="sidebar-dropdown-item">
-                        <a href="{{route('anasayfa')}}" class="sidebar-link active"><span class="nav-icon"><i class="fa-light fa-grid-2"></i></span> <span class="sidebar-txt">Dashboard</span></a>
+                        <a href="dashboard-index.html" class="sidebar-link active"><span class="nav-icon"><i class="fa-light fa-grid-2"></i></span> <span class="sidebar-txt">Dashboard</span></a>
                     </li>
                 </ul>
             </li>
@@ -107,100 +107,164 @@
     </div>
 </div>
 <!-- main sidebar end -->
-
+<body class="body-padding body-p-top light-theme">
 <!-- main content start -->
 <div class="main-content">
-    <div class="row">
-        <div class="col-xxl-9 col-lg-8">
+    <div class="dashboard-breadcrumb mb-30">
+        <h2>View Profile</h2>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
             <div class="panel">
                 <div class="panel-body">
-                    <div id="calendar"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xxl-3 col-lg-4 calendar-sidebar">
-            <div class="panel mb-30">
-                <div class="panel-header">
-                    <h5>Reserved Event</h5>
-                </div>
-                <div class="panel-body">
-                    <div id="external-events" class="sidebar-event-list">
-                        <div class="fc-event">My Event 1</div>
-                        <div class="fc-event">My Event 2</div>
-                        <div class="fc-event">My Event 3</div>
-                        <div class="fc-event">My Event 4</div>
-                        <div class="fc-event">My Event 5</div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="drop-remove">
-                            <label for="drop-remove" class="form-check-label">Remove after drop</label>
+                    <div class="profile-sidebar">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="profile-sidebar-title">User Information</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-icon btn-outline-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-sm-end">
+                                    <li><a class="dropdown-item" href="dashboard-edit-profile.html"><i class="fa-regular fa-pen-to-square"></i> Edit Information</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="top">
+                            <div class="image-wrap">
+                                <div class="part-img rounded-circle overflow-hidden">
+                                    <img src="dashboad/assets/images/admin.png" alt="admin">
+                                </div>
+                                <button class="image-change"><i class="fa-light fa-camera"></i></button>
+                            </div>
+                            <div class="part-txt">
+                                <h4 class="admin-name">Mitchell C. Shay</h4>
+                                <span class="admin-role">Graphic Designer</span>
+                                <div class="admin-social">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <h6 class="profile-sidebar-subtitle">Communication Info</h6>
+                            <ul>
+                                <li><span>Full Name:</span>Anna Adame</li>
+                                <li><span>Mobile:</span>+(1) 987 65433</li>
+                                <li><span>Mail:</span>example@mail.com</li>
+                                <li><span>Address:</span>California, United States</li>
+                                <li><span>Joining Date:</span>24 Nov 2022</li>
+                            </ul>
+                            <h6 class="profile-sidebar-subtitle">About Me</h6>
+                            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="panel">
-                <div class="panel-header">
-                    <h5>Upcoming Events</h5>
-                </div>
-                <div class="panel-body">
-                    <div class="upcoming-event-list sidebar-event-list"></div>
-                </div>
-            </div>
         </div>
-    </div>
-
-    <!-- footer start -->
-    <div class="footer">
-        <p>Copyright© <script>document.write(new Date().getFullYear())</script> All Rights Reserved By <span class="text-primary">Revel</span></p>
-    </div>
-    <!-- footer end -->
-</div>
-<!-- main content end -->
-
-<!-- event modal start -->
-<div class="modal fade" id="event-modal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form class="needs-validation" name="event-form" id="form-event" novalidate>
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title">Event</h5>
-                    <button type="button" class="btn btn-sm btn-icon btn-outline-primary" data-bs-dismiss="modal" aria-label="Close"><i class="fa-light fa-xmark"></i></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <div>
-                                <label class="control-label form-label">Event Name</label>
-                                <input class="form-control" placeholder="Insert Event Name" type="text" name="title" id="event-title" required>
-                                <div class="invalid-feedback">Please provide a valid event name</div>
-                            </div>
+        <div class="col-md-8">
+            <div class="row mb-30">
+                <div class="col-lg-4">
+                    <div class="dashboard-top-box rounded-bottom panel-bg">
+                        <div class="left">
+                            <h3>$34,152</h3>
+                            <p>Shipping fees are not</p>
+                            <a href="#">View net earnings</a>
                         </div>
-                        <div class="col-12">
-                            <div class="mb-3">
-                                <label class="control-label form-label">Category</label>
-                                <select class="form-control" name="category" id="event-category" required>
-                                    <option value="">Select a category</option>
-                                    <option value="bg-primary">Primary</option>
-                                    <option value="bg-danger">Danger</option>
-                                    <option value="bg-success">Success</option>
-                                    <option value="bg-info">Info</option>
-                                    <option value="bg-dark">Dark</option>
-                                    <option value="bg-warning">Warning</option>
-                                </select>
-                                <div class="invalid-feedback">Please select a valid event category</div>
+                        <div class="right">
+                            <span class="text-primary">+16.24%</span>
+                            <div class="part-icon rounded">
+                                <span><i class="fa-light fa-dollar-sign"></i></span>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <button type="button" class="btn btn-sm btn-danger" id="btn-delete-event">Delete</button>
+                </div>
+                <div class="col-lg-4 col-6 col-xs-12">
+                    <div class="dashboard-top-box rounded-bottom panel-bg">
+                        <div class="left">
+                            <h3>36,894</h3>
+                            <p>Orders</p>
+                            <a href="#">Excluding orders in transit</a>
                         </div>
-                        <div class="col-6 text-end">
-                            <button type="button" class="btn btn-sm btn-light me-1" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-sm btn-success" id="btn-save-event">Save</button>
+                        <div class="right">
+                            <span class="text-primary">+16.24%</span>
+                            <div class="part-icon rounded">
+                                <span><i class="fa-light fa-bag-shopping"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </form>
+                <div class="col-lg-4 col-6 col-xs-12">
+                    <div class="dashboard-top-box rounded-bottom panel-bg">
+                        <div class="left">
+                            <h3>$34,152</h3>
+                            <p>Customers</p>
+                            <a href="#">See details</a>
+                        </div>
+                        <div class="right">
+                            <span class="text-primary">+16.24%</span>
+                            <div class="part-icon rounded">
+                                <span><i class="fa-light fa-user"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-header">
+                    <h5>User Activities</h5>
+                    <div class="dropdown">
+                        <a href="#" class="btn btn-sm btn-primary">View All</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="user-activity">
+                        <ul>
+                            <li>
+                                <div class="left">
+                                    <span class="user-activity-title">Your account is logged in</span>
+                                    <span class="user-activity-details">From "RuthDyer" UiDesign Leave</span>
+                                    <span class="user-activity-date">Monday 12 Jan 2020.</span>
+                                </div>
+                                <div class="right">
+                                    <span class="user-activity-time">6 min ago</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <span class="user-activity-title">Current language has been changed</span>
+                                    <span class="user-activity-details">From "RuthDyer" UiDesign Leave</span>
+                                    <span class="user-activity-date">Monday 12 Jan 2020.</span>
+                                </div>
+                                <div class="right">
+                                    <span class="user-activity-time">16 min ago</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <span class="user-activity-title">Leave Approval Request</span>
+                                    <span class="user-activity-details">From "RuthDyer" UiDesign Leave</span>
+                                    <span class="user-activity-date">Monday 12 Jan 2020.</span>
+                                </div>
+                                <div class="right">
+                                    <span class="user-activity-time">6 min ago</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <span class="user-activity-title">Asked about this product</span>
+                                    <span class="user-activity-details">From "RuthDyer" UiDesign Leave</span>
+                                    <span class="user-activity-date">Monday 12 Jan 2020.</span>
+                                </div>
+                                <div class="right">
+                                    <span class="user-activity-time">16 min ago</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
